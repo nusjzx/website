@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="..\markbind\css\bootstrap.min.css">
     <link rel="stylesheet" href="..\markbind\css\github.min.css">
     <link rel="stylesheet" href="..\markbind\css\markbind.css">
+    
 </head>
 <body>
 <div id="app" class="container-fluid">
@@ -26,7 +27,7 @@
     </dropdown>
     <li slot="right">
       <form class="navbar-form">
-        <typeahead :data="searchData" placeholder="Search" :template="titleTemplate" template-name="title" :on-hit="searchCallback"></typeahead>
+        <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback"></searchbar>
       </form>
     </li>
   </navbar>
@@ -244,5 +245,8 @@
 </body>
 <script src="..\markbind\js\vue.min.js"></script>
 <script src="..\markbind\js\vue-strap.min.js"></script>
+<script>
+    const baseUrl = '/website'
+</script>
 <script src="..\markbind\js\setup.js"></script>
 </html>
